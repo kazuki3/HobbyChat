@@ -31,7 +31,7 @@
 * belongs_to :user
 * belongts_to :room
 
-## roomテーブル
+## roomsテーブル
 | Column | Type | Options |
 |:-----------|------------:|:------------:|
 |room_name|integer|null:false|
@@ -44,7 +44,7 @@
 * has_many :contributions
 * has_many :user_rooms
 
-## roomテーブル
+## user_roomテーブル
 | Column | Type | Options |
 |:-----------|------------:|:------------:|
 |room|foreign|null:false|
