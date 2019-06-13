@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
   </head>
   <body>
+   表示テストです
       @yield('content')
   </body>
 </html>
