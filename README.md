@@ -4,7 +4,7 @@
 話題に応じた投稿ができる掲示板アプリ br
 作成日 : 2019年6月12日
 
-## usersテーブル
+## userテーブル
 | Column | Type | Options |
 |:-----------|------------:|:------------:|
 |nickname|string|null:falsee|
@@ -19,7 +19,7 @@
 * has_many :user_rooms
 
 
-## contributionsテーブル
+## contributionテーブル
 | Column | Type | Options |
 |:-----------|------------:|:------------:|
 |message|string|null:true|
@@ -31,7 +31,7 @@
 * belongs_to :user
 * belongts_to :room
 
-## roomsテーブル
+## roomテーブル
 | Column | Type | Options |
 |:-----------|------------:|:------------:|
 |room_name|integer|null:false|
