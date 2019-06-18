@@ -3,7 +3,7 @@
 @section('content')
 <div class="form-container">
   <h2>スレッドを作成する</h2>
-  <form action="{{ route('room.create') }}" method="POST" class="clearfix">
+  <form action="{{ route('room.create') }}" method="POST" enctype="multipart/form-data" class="clearfix">
     {!! csrf_field() !!}
     <dl>
       <dt class="form-label">スレッド名</dt>

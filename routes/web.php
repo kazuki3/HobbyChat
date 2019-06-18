@@ -1,8 +1,8 @@
 <?php
 
-Route::get('/', function () {
-    return view('top');
-});
+Route::get('/', 'RoomController@index')->name('top-index');
+
+Route::get('/room/{id}', 'RoomController@show')->name('room.show');
 
 Route::get('/room', function () {
     return view('room');

@@ -13,7 +13,7 @@ class RoomRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,9 +24,9 @@ class RoomRequest extends FormRequest
     public function rules()
     {
         return [
-            'room_name' => 'reqquired | max:255',
+            'room_name' => 'required | max:255',
             'category' => 'required',
-            'thumbnail' => 'required | image',
+            'thumbnail' => 'required | file | mimes:jpeg,png,jpg,gif | image',
         ];
     }
 }
