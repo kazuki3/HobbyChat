@@ -5,6 +5,7 @@
     <title>HobbyChat</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/auth.css') }}">
   </head>
 
   <body>

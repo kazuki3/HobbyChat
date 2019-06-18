@@ -1,0 +1,43 @@
+.form-container {
+  background-color: #eaeaea;
+  padding: 30px 50px;
+}
+
+.icon {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.form-label {
+  width: 165px;
+  padding: 10px 0;
+  float: left;
+  clear: both;
+}
+
+.form-box {
+  padding: 10px 0;
+}
+
+.name {
+  width: 240px;
+  height: 30px;
+}
+
+.email {
+  width: 300px;
+  height: 30px;
+}
+
+.password {
+  width: 300px;
+  height: 30px;
+}
+
+.submit-btn {
+  height: 50px;
+  line-height: 50px;
+  background-color: blue;
+  color: white;
+  font-size: 18px;
+}
