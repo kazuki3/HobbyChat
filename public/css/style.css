@@ -97,6 +97,17 @@ header{
 		list-style: none;
 }
 
+.menu ul:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.menu li{
+	float: left;
+	width: auto;
+}
+
 .menu li a{
 	 display: inline-block;
 		padding: 10px;
@@ -120,18 +131,6 @@ header{
 .menu li a:hover{
 	 background-color: #ffaf1a;
 }
-
-.menu ul:after{
-	 content: "";
-		display: block;
-		clear: both;
-}
-
-.menu li{
-	 float: left;
-		width: auto;
-}
-
 
 /* BOX2とBOX3を横に並べる */
 .boxA:after{
@@ -221,7 +220,7 @@ header{
 		font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
-.CommonMenu_List ul li .name{
+.CommonMenu_List ul li div{
 	 position:relative;
 		float: left;
 		font-size:110%;
