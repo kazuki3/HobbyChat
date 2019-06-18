@@ -12,7 +12,7 @@ class RoomController extends Controller
         $room->room_name = $request->room_name;
         $room->category = $request->category;
         $room->thumbnail = $request->thubnail;
-        $room->administrator = Auth::usre()->id;
+        $room->administrator = Auth::user()->id;
 
         $room->save();
 
