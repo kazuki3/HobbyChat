@@ -42,3 +42,224 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+a {
+	text-decoration: none;
+}
+
+
+/* ヘッダー内を横に並べる設定 */
+header{
+	 border-top: solid #87cefa 3px;
+		border-bottom: solid #87cefa 4px;
+}
+
+/* ヘッダー全体 */
+.header{
+	 width: 1200px;
+  margin-left: auto;
+		margin-right: auto;
+		padding: 10px 0px;
+}
+
+.header:after{
+	 content: "";
+		display: block;
+		clear: both;
+}
+
+.header-site{
+	 float: left;
+		width: auto;
+}
+
+.header-nav{
+  float: right;
+		width: auto;
+}
+
+/* サイト名 */
+.header-site h1 a{
+	 color: #000000;
+		text-decoration: none;
+		text-shadow:1px 2px 4px #808080;
+		font-family: 'Lobster', cursive;
+}
+
+.header-site h1{
+	 margin: 0;
+		font-size: 45px;
+}
+
+/* ナビゲーション */
+.menu ul{
+	 margin: 0;
+		padding: 0;
+		list-style: none;
+}
+
+.menu li a{
+	 display: inline-block;
+		padding: 10px;
+		margin-right: 15px;
+		margin-top: 5px;
+		color: #fff;
+		font-size: 15px;
+		font-weight: bold;
+		text-decoration: none;
+		background-color: #FFA500;
+		border-radius: 5px;
+		border-bottom: solid 2px #d27d00;/*少し濃い目の色に*/
+		box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+}
+
+.menu li a:active {
+  border-bottom: solid 2px #fd9535;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+}
+
+.menu li a:hover{
+	 background-color: #ffaf1a;
+}
+
+.menu ul:after{
+	 content: "";
+		display: block;
+		clear: both;
+}
+
+.menu li{
+	 float: left;
+		width: auto;
+}
+
+
+/* BOX2とBOX3を横に並べる */
+.boxA:after{
+	 content: "";
+		display: block;
+		clear: both;
+}
+
+.boxA{
+ 	width: 1200px;
+ 	margin-top: 30px;
+ 	margin-left: auto;
+ 	margin-right: auto;
+}
+
+.box2{
+	 margin-top: 0;
+		margin-right: 60px;
+	 float: left;
+		width: 65%;
+		height: 1000px;
+		font-size: 20px;
+}
+
+.box3{
+	 float: right;
+		width: 30%;
+}
+
+/* ルームリスト */
+.Common_List{
+  line-height: 1.2em;
+}
+
+.Common_List:hover{
+	 background-color: #fffafa;
+}
+
+.Common_List{
+	 padding: 15px 10px 16px;
+		margin: 8px 8px 0px 8px;
+	 border: solid #000000 1px;
+		border-radius: 5px;
+		box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.1);
+}
+
+.ListTitle{
+		color: #000000;
+		font-size: 110%;
+		padding-top: 10px;
+		padding-left: 120px;
+}
+
+.ListText{
+ 	color: #000000;
+		font-size: 80%;
+		margin-top: 7px;
+		padding-left: 120px;
+		padding-bottom: 10px;
+}
+
+.ContentsTitle{
+  padding: 10px;
+		margin: 10px 8px 10px 0px;
+		color: #fff;
+		font-size: 25px;
+	 text-align: center;
+		background-color: #008080;
+}
+
+/* 作成・検索欄 */
+.CommonMenu_List{
+	 padding: 0px 16px 0px 8px;
+}
+
+.CommonMenu_List ul{
+	 margin-top: 10px;
+}
+
+.CommonMenu_List li{
+	 padding: 10px;
+		margin-bottom: 10px;
+		height: 47px;
+		line-height: 47px;
+		background-color: #f0f0f0;
+		box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1);
+		font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.CommonMenu_List ul li .name{
+	 position:relative;
+		float: left;
+		font-size:110%;
+		padding-left: 40px;
+}
+
+.btn-make{
+	 height: 25px;
+  display: inline-block;
+	 padding: 0px 14px 20px;
+	 margin-left: 60px;
+	 background: #668ad8;/*ボタン色*/
+	 color: #fff;/*ボタン色と同じに*/
+	 box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+	 border-bottom: solid 3px #627295;
+	 border-radius: 3px;/*角の丸み*/
+	 font-weight: bold;
+	 text-shadow: -1px -1px rgba(255, 255, 255, 0.44), 1px 1px rgba(0, 0, 0, 0.38);
+}
+
+.btn-make:active{
+	 -webkit-transform: translateY(4px);
+	 transform: translateY(4px);
+	 box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+	 border-bottom: none;
+}
+
+.SearchInput{
+ 	height: 30px;
+		margin-left: 60px;
+}
+
+.MakeIcon{
+	 position: absolute;
+		left: 20px;
+}
+
+.SearchIcon{
+	 position: absolute;
+		left: 20px;
+}
