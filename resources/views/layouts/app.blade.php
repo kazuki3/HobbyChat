@@ -18,14 +18,21 @@
         <div class="header-nav">
           <nav class="menu">
             <ul>
-              <li><a href="#">ログイン</a></li>
-              <li><a href="#">新規登録</a></li>
+              @if (Auth::check())
+                <li>
+                  <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">ログアウト</a>
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">@csrf</form>
+                </li>
+              @else
+                <li><a href="{{ route('login') }}">ログイン</a></li>
+                <li><a href="{{ route('register') }}">新規登録</a></li>
+              @endif
             </ul>
           </nav>
         </div>
       </div>
     </header>
 
-      @yield('content')
+    @yield('content')
   </body>
 </html>
