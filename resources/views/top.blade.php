@@ -38,27 +38,6 @@
     </ul>
   </div>
 
-  <div class="box3">
-    <div class="ContentsTitle">
-      掲示板を作成・検索
-    </div>
-    <div class="CommonMenu_List">
-      <ul>
-        @foreach($rooms as $room)
-          <li class="Common_List">
-            <a href="#">
-              <div class="ListTitle">
-                {{ $room->room_name }}
-              </div>
-              <div class="ListText">
-                本文
-              </div>
-            </a>
-          </li>
-        @endforeach
-      </ul>
-    </div>
-
     <div class="box3">
       <div class="ContentsTitle">
         掲示板を作成・検索
