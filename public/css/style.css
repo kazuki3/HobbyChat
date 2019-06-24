@@ -24,36 +24,50 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
+html{
+	 height: 100%;
+}
+body{
   line-height: 1;
+		height: 100%;
+		overflow-y:hidden; /*スクロールバーの非表示*/
 }
-ol, ul {
-	list-style: none;
+ol, ul{
+	 list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote, q{
+ 	quotes: none;
 }
 blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+q:before, q:after{
+	 content: '';
+ 	content: none;
 }
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+table{
+	 border-collapse: collapse;
+ 	border-spacing: 0;
 }
-a {
-	text-decoration: none;
+a{
+	 text-decoration: none;
+}
+/* ボタン要素をリセット */
+button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
 }
 
-
+/* ヘッダーCSS */
 /* ヘッダー内を横に並べる設定 */
 header{
 	 border-top: solid #87cefa 3px;
 		border-bottom: solid #87cefa 4px;
 }
 
-/* ヘッダー全体 */
+/* ヘッダー全体の設定 */
 .header{
 	 width: 1200px;
   margin-left: auto;
@@ -90,7 +104,7 @@ header{
 		font-size: 45px;
 }
 
-/* ナビゲーション */
+/* ナビゲーション(ログイン、新規登録ボタン) */
 .menu ul{
 	 margin: 0;
 		padding: 0;
@@ -132,6 +146,8 @@ header{
 	 background-color: #ffaf1a;
 }
 
+
+/* ボディ要素のCSS */
 /* BOX2とBOX3を横に並べる */
 .boxA:after{
 	 content: "";
@@ -144,6 +160,8 @@ header{
  	margin-top: 30px;
  	margin-left: auto;
  	margin-right: auto;
+  height: 70%;
+	 /* background: linear-gradient(#64b3f4, #c2e59c); */
 }
 
 .box2{
@@ -151,19 +169,17 @@ header{
 		margin-right: 60px;
 	 float: left;
 		width: 65%;
-		height: 1000px;
 		font-size: 20px;
+		height: 100%;
 }
 
 .box3{
-	 float: right;
 		width: 30%;
+		height: 100%;
+		float: right;
 }
 
 /* ルームリスト */
-.Common_List{
-  line-height: 1.2em;
-}
 
 .Common_List:hover{
 	 background-color: #fffafa;
@@ -175,6 +191,7 @@ header{
 	 border: solid #000000 1px;
 		border-radius: 5px;
 		box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.1);
+		line-height: 1.2em;
 }
 
 .ListTitle{
@@ -238,7 +255,6 @@ header{
 	 border-bottom: solid 3px #627295;
 	 border-radius: 3px;/*角の丸み*/
 	 font-weight: bold;
-	 text-shadow: -1px -1px rgba(255, 255, 255, 0.44), 1px 1px rgba(0, 0, 0, 0.38);
 }
 
 .btn-make:active{
@@ -261,4 +277,117 @@ header{
 .SearchIcon{
 	 position: absolute;
 		left: 20px;
+}
+
+
+/* 投稿フォームCSS */
+.boxB{
+ 	width: 1200px;
+		height: auto;
+ 	margin-left: auto;
+ 	margin-right: auto;
+		box-sizing:content-box;
+}
+
+.box4{
+  height: auto;
+	 float: left;
+		width: 65%;
+}
+
+.CommentForm{
+ 	position: absolute; /* 絶対位置 */
+ 	bottom: 0; /* 一番下に固定 */
+		z-index: 1;
+	 padding: 10px;
+		margin: 8px 0px 0px 20px;
+		float: left;
+		background-color: #fff;
+		box-sizing:content-box;
+}
+
+.CommentForm form textarea{
+	 display: block;
+	 width:707px;
+		height: 60px;
+		padding: 5px;
+		font-size: 20px;
+	 resize: none;
+		-webkit-appearance: none;
+  border: dashed #ffffff 1.5px;
+		border-radius: 5px;
+		background-color: #f1efef;
+		box-shadow: 1px 0px 0px 5px #f1efef;
+		outline: none;
+}
+
+.CommentForm form button{
+  float: right;
+}
+
+textarea[type="text"]:focus {
+  box-shadow: 0px 0px 5px 5px #87cefa;
+		transition: .3s;
+}
+
+.SubmitBtn{
+ 	position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  padding: 0.25em 0.5em;
+  margin-top: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #fff;
+  background-color: #3399cc;
+  border-bottom: solid 2px #2d86b3;/*少し濃い目の色に*/
+  border-radius: 5px;
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+  outline: none;
+}
+
+.SubmitBtn:active{
+  border-bottom: solid 2px #2d86b3;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+}
+
+.SubmitBtn:hover{
+	 background-color: #39ace6;
+}
+
+/* 投稿内容CSS */
+
+.box2 .Chatbox{
+	 height: 100%;
+		padding: 0px 30px 5px 30px;
+	 overflow: auto;
+}
+
+.chat{
+ 	padding: 10px 5px;
+ 	margin: 8px 8px 0px 8px;
+		border-left: solid 5px #5d627b;
+ 	border-radius: 1px;
+ 	box-shadow: 1px 1px 2px 2px rgba(0,0,0,0.5);
+		background-color: #fffafa;
+}
+
+.ChatName{
+	 display: inline-block;
+  margin-left: 50px;
+	 font-size: 90%;
+		font-weight: bold;
+}
+
+.ChatTime{
+	 display: inline-block;
+		float: right;
+		margin-right: 20px;
+	 font-size: 60%;
+}
+
+.ChatText{
+	 padding: 5px;
+	 margin: 10px 25px 0px;
 }
