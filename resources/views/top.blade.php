@@ -2,8 +2,47 @@
 
 @section('content')
 
-  <div class="boxA">
-    <div class="box2">
+<div class="boxA">
+  <div class="box2">
+    <ul>
+      <li class="Common_List">
+        <a href="#">
+          <div class="ListTitle">
+            タイトル
+          </div>
+          <div class="ListText">
+            本文
+          </div>
+        </a>
+      </li>
+      <li class="Common_List">
+        <a href="#">
+          <div class="ListTitle">
+            タイトル
+          </div>
+          <div class="ListText">
+            本文
+          </div>
+        </a>
+      </li>
+      <li class="Common_List">
+        <a href="#">
+          <div class="ListTitle">
+            タイトル
+          </div>
+          <div class="ListText">
+            本文
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="box3">
+    <div class="ContentsTitle">
+      掲示板を作成・検索
+    </div>
+    <div class="CommonMenu_List">
       <ul>
         @foreach($rooms as $room)
           <li class="Common_List">

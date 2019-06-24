@@ -9,4 +9,9 @@ Route::get('/room', function () {
 })->name('room');
 Route::post('/room', 'RoomController@create')->name('room.create');;
 
+Route::get('/thread', function () {
+    return view('thread');
+});
+
+
 Auth::routes();
