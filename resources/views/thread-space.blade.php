@@ -46,9 +46,10 @@
 <div class="boxB">
   <div class="box4">
     <div class="CommentForm">
+      <span class="error-message">{{ $errors->first('contribution') }}</span>
       <form action="{{ route('contribution.create', ['id' => $id]) }}" method="post" enctype="multipart/form-data">
         {!! csrf_field() !!}
-        <textarea type="text" placeholder="コメントを書く" name="contribution"></textarea>
+        <textarea type="text" placeholder="コメントを書く" name="contribution" value="{{ old('contribution') }}"></textarea>
         <button type="submit" class="SubmitBtn">投稿する</button>
       </form>
     </div>
