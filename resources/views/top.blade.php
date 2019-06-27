@@ -5,36 +5,19 @@
 <div class="boxA">
   <div class="box2">
     <ul>
-      <li class="Common_List">
-        <a href="#">
-          <div class="ListTitle">
-            タイトル
-          </div>
-          <div class="ListText">
-            本文
-          </div>
-        </a>
-      </li>
-      <li class="Common_List">
-        <a href="#">
-          <div class="ListTitle">
-            タイトル
-          </div>
-          <div class="ListText">
-            本文
-          </div>
-        </a>
-      </li>
-      <li class="Common_List">
-        <a href="#">
-          <div class="ListTitle">
-            タイトル
-          </div>
-          <div class="ListText">
-            本文
-          </div>
-        </a>
-      </li>
+      @foreach ($rooms as $room)
+        <li class="Common_List">
+          <!-- <a href="/room/{{ $room->id }}"> -->
+          <a href="{{ route('room.show', ['room' => $room]) }}">
+            <div class="ListTitle">
+              {{ $room->room_name }}
+            </div>
+            <div class="ListText">
+              本文
+            </div>
+          </a>
+        </li>
+      @endforeach
     </ul>
   </div>
 
