@@ -22,7 +22,7 @@
 ## contributionテーブル
 | Column | Type | Options |
 |:-----------|------------:|:------------:|
-|message|string|null:true|
+|contribution|string|null:true|
 |image|string|null:true|
 |user|foreign|null:false|
 |room|foreign|null:false|

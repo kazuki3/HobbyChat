@@ -12,7 +12,7 @@
     <header>
       <div class="header">
         <div class="header-site">
-          <h1><a href="#">HobbyChat</a></h1>
+          <h1><a href="{{ route('top-index') }}">HobbyChat</a></h1>
         </div>
 
         <div class="header-nav">

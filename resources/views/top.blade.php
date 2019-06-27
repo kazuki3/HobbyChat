@@ -7,7 +7,6 @@
     <ul>
       @foreach ($rooms as $room)
         <li class="Common_List">
-          <!-- <a href="/room/{{ $room->id }}"> -->
           <a href="{{ route('room.show', ['room' => $room]) }}">
             <div class="ListTitle">
               {{ $room->room_name }}
