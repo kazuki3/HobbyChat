@@ -4,17 +4,17 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Room extends Model
+class Contribution extends Model
 {
     protected $fillable = [
-        'room_name', 'category', 'thumbnail', 'admnistrator_id', 
+        'message', 'user_id', 'image', 'room_id', 
     ];
 
     public function user(){
         return $this->belongsTo('App\User');
     }
 
-    public function contributions() {
-        return $this->hasMany('App\Contribution');
+    public function room(){
+        return $this->belongsTo('App\Room');
     }
 }

@@ -40,4 +40,8 @@ class User extends Authenticatable
     public function rooms() {
         return $this->hasMany('App\Room');
     }
+    
+    public function contributions() {
+        return $this->hasMany('App\Contribution');
+    }
 }

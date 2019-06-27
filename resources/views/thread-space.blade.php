@@ -5,17 +5,19 @@
   <div class="box2">
     <div class="Chatbox">
       <ul>
-        <li class="chat">
-          <div class="ChatName">
-            名前
-          </div>
-          <div class="ChatTime">
-            時間
-          </div>
-          <div class="ChatText">
-            本文
-          </div>
-        </li>
+        @foreach ($contributions as $contribution)
+          <li class="chat">
+            <div class="ChatName">
+            {{ $contribution->user->name }}
+            </div>
+            <div class="ChatTime">
+            {{ $contribution->created_at }}
+            </div>
+            <div class="ChatText">
+              {{ $contribution->contribution }}
+            </div>
+          </li>
+        @endforeach
       </ul>
     </div>
   </div>
@@ -44,8 +46,9 @@
 <div class="boxB">
   <div class="box4">
     <div class="CommentForm">
-      <form method="post" action="">
-        <textarea type="text" placeholder="コメントを書く"></textarea>
+      <form action="{{ route('contribution.create', ['id' => $id]) }}" method="post" enctype="multipart/form-data">
+        {!! csrf_field() !!}
+        <textarea type="text" placeholder="コメントを書く" name="contribution"></textarea>
         <button type="submit" class="SubmitBtn">投稿する</button>
       </form>
     </div>
