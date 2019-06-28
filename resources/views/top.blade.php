@@ -12,7 +12,7 @@
               {{ $room->room_name }}
             </div>
             <div class="ListText">
-              本文
+            本文
             </div>
           </a>
         </li>
