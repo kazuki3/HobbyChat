@@ -16,6 +16,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/thread', function () {
         return view('thread');
     });
+
+    Route::get('/notice', 'NoticeController@getNotice');
+    Route::post('/notice', 'NoticeController@getNotice');
 });
 
 // ユーザー認証
