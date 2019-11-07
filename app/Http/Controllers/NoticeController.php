@@ -44,5 +44,13 @@ class NoticeController extends Controller
             fwrite($fp, $str);
             fclose($fp);
         }
+
+        if ($message['Type'] === 'Notification') {
+            // Confirm the subscription by sending a GET request to the SubscribeURL
+            $str = print_r($message);
+            $fp = fopen("test.txt", "w");
+            fwrite($fp, $str);
+            fclose($fp);
+        }
     }
 }
